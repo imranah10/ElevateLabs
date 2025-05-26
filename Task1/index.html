@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Landing Page</title>
+    <!-- tailwind css cdn  -->
+         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class=" sticky top-0 z-50 text-white font-bold bg-zinc-800 shadow-md font-[poppins]">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-xl font-bold text-blue-600 w-full h-full">
+            <img  class="cursor-pointer w-18 h-10 inline object-fit rounded-lg" src="../Task1/assets/logo.png" alt="logo">
+        </div>
+        <nav class="hidden md:flex space-x-6">
+          <a href="#" class="hover:text-blue-600 transition">Home</a>
+          <a href="#" class="hover:text-blue-600 transition">Services</a>
+          <a href="#" class="hover:text-blue-600 transition">About</a>
+          <a href="#" class="hover:text-blue-600 transition">Contact</a>
+        </nav>
+        <button class="cursor-pointer md:hidden block text-blue-600 focus:outline-none" id="navToggle">
+         <img src="../Task1/assets/menu.png" alt="">
+        </button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div class="md:hidden hidden px-4 pb-4 space-y-2" id="mobileNav">
+        <a href="#" class="block text-sm text-gray-400 hover:text-blue-600">Home</a>
+        <a href="#" class="block text-sm text-gray-400 hover:text-blue-600">Services</a>
+        <a href="#" class="block text-sm text-gray-400 hover:text-blue-600">About</a>
+        <a href="#" class="block text-sm text-gray-400 hover:text-blue-600">Contact</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-300 py-20">
+            <div class="space-y-4 mx-auto max-w-6xl">
+                <h1 class="text-5xl font-bold">Build Your Website with Confidence</h1>
+                <p class="text-xl text-zinc-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia assumenda libero totam excepturi ipsa porro reprehenderit harum quo alias necessitatibus.</p>
+                <button class="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition">Get Started</button>
+            </div>
+    </section>
+
+ <!-- Footer -->
+<footer class="font-[arial] bg-zinc-800  border-t border-zinc-600 mt-20 px-4 py-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+    <!-- Left Column -->
+    <div class="">
+      <h1 class="text-4xl text-blue-700 font-bold">SKYTECH</h1>
+      <p class="mt-2 text-white">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic officia odit quis, quod alias sint nisi doloribus velit. Nobis dolor natus odio enim similique quia.
+      </p>
+    </div>
+
+    <!-- Right Column -->
+    <div class="space-y-4 md-space-y-2">
+      <h3 class="text-xl font-semibold xs:text-start sm:text-center md-text-end text-yellow-700 mb-2">Follow us</h3>
+      <ul class="space-y-2 xs:flex-col sm:flex justify-evenly items-center md:flex-col">
+        <li >
+          <a href="#" class="text-white hover:underline hover:text-yellow-600 cursor-pointer transition duration-300">Instagram</a>
+        </li>
+        <li>
+          <a href="#" class="text-white hover:underline hover:text-yellow-600 cursor-pointer transition duration-300">Facebook</a>
+        </li>
+        <li>
+          <a href="#" class="text-white hover:underline hover:text-yellow-600 cursor-pointer transition duration-300">WhatsApp</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="text-center mt-6 text-xl text-gray-500">
+    &copy; 2025 SKYTECH. All rights reserved.
+  </div>
+</footer>
+
+
+    <script>
+      // Toggle mobile nav
+      document.getElementById('navToggle').addEventListener('click', function () {
+        const nav = document.getElementById('mobileNav');
+        nav.classList.toggle('hidden');
+      });
+    </script>
+
+  </body>
+</html>

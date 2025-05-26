@@ -1,0 +1,13 @@
+/* Custom Styles to make it feel manually written */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
