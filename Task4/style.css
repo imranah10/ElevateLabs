@@ -1,0 +1,132 @@
+/* ====== NAVBAR DESIGN ====== */
+.nvbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 20px;
+    background-color: #00d9b5; /* aquamarine */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nvlogo {
+    width: 70px;
+    height: 30px;
+}
+
+.nvlinks {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nvlinks > li > a {
+    text-decoration: none;
+    color: #c70039;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nvlinks > li > a:hover {
+    color: #000;
+}
+
+/* ====== CONTENT DESIGN ====== */
+.contentMain_headind {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    background-color: #e0f7f1;
+}
+
+.contentHeading {
+    width: 70%;
+    color: #1a1a1a;
+}
+
+.contentHeading > h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #003566;
+}
+
+.contentHeading > p {
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.img {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== GLOBAL STYLES ====== */
+h1, p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ====== MEDIA QUERY FOR RESPONSIVENESS ====== */
+@media (max-width: 768px) {
+    .nvbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nvlogo {
+        width: 50px;
+        height: auto;
+        margin: 5px auto;
+        display: block;
+    }
+
+    .nvlinks {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .nvlinks > li {
+        margin: 5px 0;
+    }
+
+    .contentMain_headind {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contentHeading {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .img {
+        width: 90%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .contentHeading > h1 {
+        font-size: 24px;
+    }
+
+    .contentHeading > p {
+        font-size: 15px;
+    }
+}
