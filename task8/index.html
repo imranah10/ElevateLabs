@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Blog</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f8f9fa;
+    }
+
+    .blog-title {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #343a40;
+    }
+
+    .blog-card img {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .blog-card .card-body {
+      min-height: 180px;
+    }
+
+    footer {
+      background-color: #212529;
+      color: white;
+      padding: 20px 0;
+      margin-top: auto;
+    }
+
+    .footer-icons i {
+      font-size: 1.3rem;
+      margin: 0 10px;
+      color: #adb5bd;
+      transition: 0.3s;
+    }
+
+    .footer-icons i:hover {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Imran's Blog</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container py-5">
+  <h2 class="text-center blog-title mb-4">Latest Blog Posts</h2>
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card blog-card shadow-sm h-100">
+        <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=180" class="card-img-top" alt="Tech Blog">
+        <div class="card-body">
+          <h5 class="card-title">The Future of Tech</h5>
+          <p class="card-text">Explore how technology is transforming the world. AI, IoT, and blockchain are leading the charge.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card blog-card shadow-sm h-100">
+        <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=180" class="card-img-top" alt="Coding Blog">
+        <div class="card-body">
+          <h5 class="card-title">Why Learn Coding?</h5>
+          <p class="card-text">Coding is the new literacy. Discover how even basic programming knowledge opens up endless opportunities.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card blog-card shadow-sm h-100">
+        <img src="https://images.pexels.com/photos/5052875/pexels-photo-5052875.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=180" class="card-img-top" alt="Writing Blog">
+        <div class="card-body">
+          <h5 class="card-title">Start Your Blog Today</h5>
+          <p class="card-text">Blogging is a powerful way to share your ideas. Learn the easiest steps to launch your own blog today.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <p class="mb-2">&copy; 2025 Imran's Blog. All rights reserved.</p>
+  <div class="footer-icons">
+    <a href="#"><i class="bi bi-facebook"></i></a>
+    <a href="#"><i class="bi bi-instagram"></i></a>
+    <a href="#"><i class="bi bi-twitter-x"></i></a>
+    <a href="#"><i class="bi bi-github"></i></a>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
