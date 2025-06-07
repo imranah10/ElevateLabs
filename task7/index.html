@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple User Data Fetch</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+    }
+    #users {
+      max-width: 500px;
+      margin: auto;
+    }
+    .user {
+      background: white;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      box-shadow: 0 0 5px #ccc;
+    }
+    #error {
+      color: red;
+      text-align: center;
+    }
+    button {
+      display: block;
+      margin: 15px auto;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Users Info</h2>
+<button onclick="getUsers()">Reload Users</button>
+<div id="users"></div>
+<p id="error"></p>
+
+<script>
+  function getUsers() {
+    let box = document.getElementById("users");
+    let errorBox = document.getElementById("error");
+
+    box.innerHTML = "";      // Clear old data
+    errorBox.textContent = "";// Clear old error
+
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(res => res.json())        // Convert to JSON
+      .then(data => {
+        data.forEach(user => {
+          let div = document.createElement("div");
+          div.className = "user";
+          div.innerHTML = `
+            <b>Name:</b> ${user.name}<br>
+            <b>Email:</b> ${user.email}<br>
+            <b>City:</b> ${user.address.city}
+          `;
+          box.appendChild(div);
+        });
+      })
+      .catch(() => {
+        errorBox.textContent = "Something went wrong! Check internet.";
+      });
+  }
+
+  // Load on page open
+  getUsers();
+</script>
+
+</body>
+</html>
