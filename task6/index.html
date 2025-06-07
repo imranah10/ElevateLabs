@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Contact Form</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .box {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+    .success {
+      color: green;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Contact Form</h2>
+  <form id="contactForm">
+    <div class="input-group">
+      <label>Name:</label>
+      <input type="text" id="name">
+      <div class="error" id="nameError"></div>
+    </div>
+
+    <div class="input-group">
+      <label>Email:</label>
+      <input type="text" id="email">
+      <div class="error" id="emailError"></div>
+    </div>
+
+    <div class="input-group">
+      <label>Message:</label>
+      <textarea id="message"></textarea>
+      <div class="error" id="messageError"></div>
+    </div>
+
+    <button type="submit">Submit</button>
+    <div class="success" id="successMessage"></div>
+  </form>
+</div>
+
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // Stop form from submitting
+
+  // Get all input values
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let message = document.getElementById("message").value.trim();
+
+  // Get error boxes
+  let nameError = document.getElementById("nameError");
+  let emailError = document.getElementById("emailError");
+  let messageError = document.getElementById("messageError");
+  let successMessage = document.getElementById("successMessage");
+
+  // Clear all error/success messages
+  nameError.textContent = "";
+  emailError.textContent = "";
+  messageError.textContent = "";
+  successMessage.textContent = "";
+
+  // Start validation
+  let isValid = true;
+
+  if (name === "") {
+    nameError.textContent = "Please enter your name.";
+    isValid = false;
+  }
+
+  if (email === "") {
+    emailError.textContent = "Please enter your email.";
+    isValid = false;
+  } else if (!email.includes("@") || !email.includes(".")) {
+    emailError.textContent = "Please enter a valid email address.";
+    isValid = false;
+  }
+
+  if (message === "") {
+    messageError.textContent = "Please enter your message.";
+    isValid = false;
+  }
+
+  if (isValid) {
+    successMessage.textContent = "Form submitted successfully!";
+    document.getElementById("contactForm").reset();
+  }
+});
+
+</script>
+</body>
+</html>
